@@ -1,0 +1,1 @@
+// document.getElementById("bigimg").img=URL("images/image-hero-mobile.png");
