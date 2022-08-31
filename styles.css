@@ -9,7 +9,7 @@
 body{
     height:100vph;
     width: 100vph;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 98%); 
 }
 .navbar{
     display: flex;
@@ -20,30 +20,94 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.navtext{
+.lhs ul{
+    display: inline-flex;
+    list-style: none;
+    color:hsl(0, 0%, 41%);
+    margin-left: -8rem;
+}
+.lhs ul li{
+    padding-right: 2rem;
+
+}
+.lhs ul li a:hover{
+    color:hsl(0, 0%, 8%) ;
+}
+.lhs ul li a{
+    text-decoration:none;
+    color:hsl(0, 0%, 41%);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1rem;
+}
+
+
+.submenu{
+    display: none;
+}
+
+
+.lhs ul li:hover .submenu{
+display: block;
+position: absolute;
+margin-left: 3rem;
+margin-top: 1rem;
+
+}
+
+.lhs ul li:hover .submenu ul{
+    display: block;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    /* box-shadow: 5px 5px -5px -5px #ddd; */
+}
+
+.lhs ul li:hover .submenu ul li{
+    padding: 0.25rem;
+}
+
+/* .navtext{
     margin-left:-11rem;
     font-family: 'Epilogue', sans-serif;
     
 }
 .navtext a{
     text-decoration: none;
-    color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 41%);
     padding: 1.5rem;
+    text-align: center;
 }
+
+.navtext a:hover{
+    color:hsl(0, 0%, 8%) ;
+} */
+
 .rhs a{
     font-family: 'Epilogue', sans-serif;
-    color: hsl(0, 0%, 8%);
+    color:  hsl(0, 0%, 41%);
     text-decoration: none;
     padding-right: 3rem;
+   
 }
+
+.rhs a:hover{
+    color:hsl(0, 0%, 8%) ;
+}
+
 .register{
     font-family: 'Epilogue', sans-serif;
-    /* padding-left: 1.5rem;s */
-    background-color: (0, 0%, 98%);
+    font-size: 0.95rem;
+    background-color: hsl(0, 0%, 98%);
     padding: 0.5rem;
     border-radius: 0.5rem;
     border-width:0.1rem;
     border-color: hsl(0, 0%, 41%);
+color:  hsl(0, 0%, 41%);
+}
+
+.register:hover {
+    color:hsl(0, 0%, 8%) ;
+    border-color: hsl(0, 0%, 8%);
 }
 
 .midcontainer{
@@ -67,6 +131,7 @@ body{
     margin-top: 3rem;
     color: hsl(0, 0%, 8%);
     line-height: 1.5rem;
+    color:  hsl(0, 0%, 41%);
 }
 .learnbtn{
     margin-top: 3rem;
@@ -80,6 +145,11 @@ body{
     color:hsl(0, 0%, 98%);
     background-color: hsl(0, 0%, 8%);
 }
+.learnbtn:hover{
+   color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    font-weight: bold;
+}
 .textimg img{
 padding:0.5rem;
 }
@@ -92,12 +162,84 @@ padding:0.5rem;
     width: 100%;
 }
 
-
+.menuicon{
+    display: none;
+}
 
 
 
 
 .attribution{
     margin-top: 2rem;
-  
+    font-family: 'Epilogue', sans-serif;
 }
+
+@media only screen and (max-width:400px){
+    .lhs ul, .rhs{
+        display: none;
+    }
+    .menuicon{
+        display: inline-block;
+        height: 1rem;
+    }
+    .menuicon:hover{
+        cursor: pointer;
+    }
+    .midcontainer{
+       margin-left: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 0;
+       
+     }
+     .bodyimg{
+         grid-column: 1;
+         grid-row: 1;
+         /* margin-right: -3rem; */
+         /* padding-right: -3rem; */
+         margin-left: -2rem;
+         width: 100vw;
+         margin-top: -2rem;
+     }
+     .bodytext{
+       margin-top: 1.5rem;
+        /* width: 100vw; */
+        margin-left: -1rem;
+     }
+     .bodytext h1{
+        font-size: 2rem;
+        width: 95%;
+        text-align: center;
+     }
+     .bodytext p{
+        margin-top: 1rem;
+        font-size: 1rem;
+        width: 95%;
+        text-align: center;
+     }
+     br{
+        display: none;
+     }
+     .learnbtn{
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+     }
+     .textimg{
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+     }
+   .txtimg{
+    width: 5.5rem;
+   }
+   .audiophile{
+    width:4rem ;
+   }
+   .attribution{
+    font-size: 0.15rem;
+    margin-top: 0.5rem;
+    margin-left: -1rem;
+    display: none;
+   }
+}
+    
+    
