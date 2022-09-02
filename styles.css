@@ -13,12 +13,23 @@ body{
 }
 .navbar{
     display: flex;
+    /* justify-content: space-between; */
+    margin: 0 2rem;
+    height: 10vh;
+    align-items: center;
+}
+.navcontent{
+    display: flex;
     justify-content: space-between;
-    margin: 2rem 2rem 0 2rem;
+    position: absolute;
+  margin-left: 17.5rem;
+ height: 10vh;
+  align-items: center;
 }
 .lhs{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+   /* align-items: center; */
 }
 .lhs ul{
     display: inline-flex;
@@ -30,14 +41,16 @@ body{
     padding-right: 2rem;
 
 }
-.lhs ul li a:hover{
-    color:hsl(0, 0%, 8%) ;
-}
+
 .lhs ul li a{
     text-decoration:none;
     color:hsl(0, 0%, 41%);
     font-family: 'Epilogue', sans-serif;
     font-size: 1rem;
+}
+
+.lhs ul li a:hover{
+    color:hsl(0, 0%, 8%) ;
 }
 
 
@@ -66,6 +79,7 @@ margin-top: 1rem;
     padding: 0.25rem;
 }
 
+
 /* .navtext{
     margin-left:-11rem;
     font-family: 'Epilogue', sans-serif;
@@ -82,11 +96,16 @@ margin-top: 1rem;
     color:hsl(0, 0%, 8%) ;
 } */
 
+.rhs{
+    margin-left: 15rem;
+}
+
 .rhs a{
     font-family: 'Epilogue', sans-serif;
     color:  hsl(0, 0%, 41%);
     text-decoration: none;
     padding-right: 3rem;
+   
    
 }
 
@@ -102,12 +121,21 @@ margin-top: 1rem;
     border-radius: 0.5rem;
     border-width:0.1rem;
     border-color: hsl(0, 0%, 41%);
+    border: solid;
 color:  hsl(0, 0%, 41%);
 }
 
 .register:hover {
     color:hsl(0, 0%, 8%) ;
     border-color: hsl(0, 0%, 8%);
+}
+
+.menuicon{
+    display: none;
+}
+
+.closemenu{
+    display: none;
 }
 
 .midcontainer{
@@ -162,10 +190,6 @@ padding:0.5rem;
     width: 100%;
 }
 
-.menuicon{
-    display: none;
-}
-
 
 
 
@@ -174,9 +198,19 @@ padding:0.5rem;
     font-family: 'Epilogue', sans-serif;
 }
 
-@media only screen and (max-width:400px){
+
+
+@media screen and (max-width:400px){
     .lhs ul, .rhs{
-        display: none;
+        /* display: none; */
+    }
+    .lhslist{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .lhs ul{
+        margin-left: 0rem;
     }
     .menuicon{
         display: inline-block;
@@ -184,6 +218,53 @@ padding:0.5rem;
     }
     .menuicon:hover{
         cursor: pointer;
+    }
+    .closemenu{
+        display:inline-block;
+        height: 1rem;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navcontent{
+      
+        flex-direction: column;
+        background-color:#fff;
+        position: absolute;
+        margin-right: 0;
+        top: 0;
+        left: 9rem;
+        right: 0;
+        bottom: 0;
+        height: 1000px;
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+    .lhs{
+        padding: 4rem 0 0 1.5rem;
+        line-height: 2rem;
+    }
+    .lhs ul li a{
+        font-size: 1.1rem;
+    }
+    .submenu{
+        position: relative;
+    }
+    .rhs{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        padding: 3rem;
+        line-height: 2rem;
+        align-items: center;
+    }
+    .login{
+        margin-left: 3rem;
+    }
+    .register{
+        padding:0.7rem 4rem;
+        border-width: 0.15rem;
     }
     .midcontainer{
        margin-left: 2rem;
