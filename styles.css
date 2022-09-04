@@ -4,12 +4,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 body {
     height: 100vph;
     width: 100vph;
     background-color: hsl(0, 0%, 98%);
+}
+
+.overlay{
+    position: absolute;
+    background-color: #000;
+    opacity: 0.6;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
+
+.maincontainer {
+    width: 100vw;
+    height: 100vh;
 }
 
 .navbar {
@@ -44,7 +59,7 @@ body {
 
 .lhs ul li {
     padding-right: 2rem;
-
+    position: relative;
 }
 
 .lhs ul li a {
@@ -67,8 +82,10 @@ body {
 .lhs ul li:hover .submenu {
     display: block;
     position: absolute;
-    margin-left: 3rem;
+    right: 0;
     margin-top: 1rem;
+    /*margin-left: 3rem;
+    margin-top: 1rem;*/
 
 }
 
@@ -87,23 +104,6 @@ body {
 .lhs ul li:hover .submenu ul li {
     padding: 0.25rem;
 }
-
-
-/* .navtext{
-    margin-left:-11rem;
-    font-family: 'Epilogue', sans-serif;
-    
-}
-.navtext a{
-    text-decoration: none;
-    color: hsl(0, 0%, 41%);
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.navtext a:hover{
-    color:hsl(0, 0%, 8%) ;
-} */
 
 .rhs {
     margin-left: 15rem;
@@ -137,6 +137,7 @@ body {
 .register:hover {
     color: hsl(0, 0%, 8%);
     border-color: hsl(0, 0%, 8%);
+    cursor: pointer;
 }
 
 .menuicon {
@@ -148,9 +149,11 @@ body {
 }
 
 .midcontainer {
-    margin: 3rem 15rem 0 10rem;
+    /* position: relative; */
+    margin: 3rem 0 0 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
 }
 
 .bodytext {
@@ -198,14 +201,14 @@ body {
 }
 
 .bodyimg {
-    width: 85%;
-    margin-left: 10rem;
-
+    /* width: 85%; */
+    /* height: 50%; */
+    margin-left: 7rem;
+    background-image: url(images/image-hero-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.bodyimg img {
-    width: 100%;
-}
 
 
 
@@ -223,7 +226,7 @@ body {
         position: relative;
     }
 
-    .lhs ul,
+    
     .rhs {
         /* display: none; */
     }
@@ -258,7 +261,7 @@ body {
     }
 
     .navcontent {
-display: none;
+        display: none;
         flex-direction: column;
         background-color: #fff;
         position: absolute;
@@ -270,7 +273,7 @@ display: none;
         height: 1000px;
         margin-left: 0;
         justify-content: flex-start;
-        transition: 9s ease-in-out;
+        /* transition: 9s ease-in-out; */
     }
 
     .lhs {
@@ -278,32 +281,35 @@ display: none;
         line-height: 2rem;
     }
 
-.lhs ul li{
-    padding: 0.5rem;
-}
+    .lhs ul li {
+        padding: 0.5rem;
+    }
 
     .lhs ul li a img {
-       position: absolute;
-       padding:0.8rem;
+        position: absolute;
+        padding: 0.8rem;
 
     }
 
     .lhs ul li a {
         font-size: 1.1rem;
-      font-weight: 500;
+        font-weight: 500;
     }
 
-.submenu li a img, .subment li a{
-    /* position: absolute; */
-}
-.lhs ul li:hover .submenu ul {
-    position: relative;
-    display: block;
-    padding: 0.5rem;
-    background-color: #fff;
-    /* border-radius: 0.8rem; */
-    /* box-shadow: 5px 5px -5px -5px #ddd; */
-}
+ 
+    .subment li a {
+        /* position: absolute; */
+    }
+
+    .lhs ul li:hover .submenu ul {
+        position: relative;
+        display: block;
+        padding: 0.5rem;
+        background-color: #fff;
+        /* border-radius: 0.8rem; */
+        /* box-shadow: 5px 5px -5px -5px #ddd; */
+    }
+
     .submenu {
         /* position: relative; */
         top: 5rem;
@@ -331,7 +337,7 @@ display: none;
     .closemenu {
         position: absolute;
         height: 1.5rem;
-        right: 2.1rem ;
+        right: 2.1rem;
         top: 1.2rem;
         display: none;
     }
@@ -339,8 +345,13 @@ display: none;
     .midcontainer {
         margin-left: 2rem;
         grid-template-columns: repeat(1, 1fr);
-        margin-right: 0;
+        /* width: 100vh; */
+margin: 0;
+    }
 
+    .maincontainer {
+        width: 100vw;
+        height: 100vh;
     }
 
     .bodyimg {
@@ -348,15 +359,22 @@ display: none;
         grid-row: 1;
         /* margin-right: -3rem; */
         /* padding-right: -3rem; */
-        margin-left: -2rem;
-        width: 100vw;
-        margin-top: -2rem;
+        /* margin-left: -2rem; */
+        width: 23.4rem;
+height: 20rem;
+        /* margin-top: -2rem; */
+        margin: 0;
+        background-image: url(images/image-hero-mobile.png);
+        background-size: cover;
     }
+    
 
     .bodytext {
-        margin-top: 1.5rem;
+        /* margin-top: 1.5rem;
         /* width: 100vw; */
-        margin-left: -1rem;
+        /* margin-left: -1rem; */
+        margin: 2rem 0 0 1rem;     
+
     }
 
     .bodytext h1 {
@@ -396,9 +414,8 @@ display: none;
     }
 
     .attribution {
-        font-size: 0.15rem;
-        margin-top: 0.5rem;
+        font-size: 0.001rem;
+        margin-top: 2rem;
         margin-left: -1rem;
-        display: none;
     }
 }
