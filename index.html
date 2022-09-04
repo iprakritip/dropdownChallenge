@@ -21,107 +21,100 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    @media screen and (max-width:400px) {
+      .attribution {
+        font-size: 0.7rem;
+        margin-top: 2rem;
+        margin-left: -1rem;
+      }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
 
 <body>
+  <div class="maincontainer">
+    <div class="overlay">
+      
+    </div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+      <div class="navcontent">
+        <div class="lhs">
+          <ul class="lhslist">
+            <li><a href="#">Features <img class="arrowdown" src="images/icon-arrow-down.svg" alt=""></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#"><img src="images/icon-todo.svg" alt=""> Todo list</a></li>
+                  <li><a href="#"><img src="images/icon-calendar.svg" alt=""> Calendar</a></li>
+                  <li><a href="#"><img src="images/icon-reminders.svg" alt=""> Reminders</a></li>
+                  <li><a href="#"><img src="images/icon-planning.svg" alt=""> Planning</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Company <img class="arrowdown" src="images/icon-arrow-down.svg" alt=""></a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="">History</a></li>
+                  <li><a href="">Our Team</a></li>
+                  <li><a href="">Blog</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
 
-  <div class="navbar">
-    <div class="logo">
-      <img src="images/logo.svg" alt="logo">
-    </div> 
-    <div class="navcontent">
-    <div class="lhs">
-      <ul class="lhslist">
-        <li><a href="#">Features  <img class="arrowdown" src="images/icon-arrow-down.svg" alt=""></a>
-          <div class="submenu">
-            <ul>
-              <li><a href="#"><img src="images/icon-todo.svg" alt="">   Todo list</a></li>
-              <li><a href="#"><img src="images/icon-calendar.svg" alt="">   Calendar</a></li>
-              <li><a href="#"><img src="images/icon-reminders.svg" alt="">   Reminders</a></li>
-              <li><a href="#"><img src="images/icon-planning.svg" alt="">   Planning</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#">Company  <img class="arrowdown" src="images/icon-arrow-down.svg" alt=""></a>
-          <div class="submenu">
-            <ul>
-              <li><a href="">History</a></li>
-              <li><a href="">Our Team</a></li>
-              <li><a href="">Blog</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
+          </ul>
 
-      </ul>
-      <!-- <div class="navtext">
-        <a href="#">Features
-        <img class="arrowdown" src="images/icon-arrow-down.svg" alt="">
-      <a href="#">Todo List</a>
-      <a href="#">Calendar</a>
-      <a href="#">Reminders</a>
-      <a href="#">Planning</a>
-    </a>
-        <a href="#">Company
-        <img class="arrowdown" src="images/icon-arrow-down.svg" alt="">
-        <a href="#">History</a>
-        <a href="#">Our Team</a>
-        <a href="#">Blog</a>
-      </a>
-        <a href="#">Careers</a>
-        <a href="#">About</a>
-      </div> -->
+        </div>
 
-
-
+        <div class="rhs">
+          <a class="login" href="#">Login</a>
+          <button class="register">Register</button>
+        </div>
+      </div>
+      <div>
+        <img class="menuicon" src="images/icon-menu.svg" alt="">
+        <img class="closemenu" src="images/icon-close-menu.svg" alt="">
+      </div>
     </div>
 
-    <div class="rhs">
-      <a class="login" href="#">Login</a>
-      <button class="register">Register</button>
-    </div>
-  </div>
-  <div>
-    <img class="menuicon" src="images/icon-menu.svg" alt="">
-    <img class="closemenu" src="images/icon-close-menu.svg" alt="">
-  </div>
-  </div>
-
-  <div class="midcontainer">
+    <div class="midcontainer">
 
 
-    <div class="bodytext">
-      <h1> Make <br> remote work</h1>
+      <div class="bodytext">
+        <h1> Make <br> remote work</h1>
 
-      <div class="description">
-        <p> Get your team in sync, no matter your location. Streamline processes,
-          create team rituals, and watch productivity soar.</p>
+        <div class="description">
+          <p> Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.</p>
+        </div>
+
+        <button class="learnbtn">Learn more</button>
+        <div class="textimg">
+          <img class="txtimg" src="images/client-databiz.svg" alt="">
+          <img class="txtimg audiophile" src="images/client-audiophile.svg" alt="">
+          <img class="txtimg" src="images/client-meet.svg" alt="">
+          <img class="txtimg" src="images/client-maker.svg" alt="">
+        </div>
+
       </div>
 
-      <button class="learnbtn">Learn more</button>
-      <div class="textimg">
-        <img class="txtimg" src="images/client-databiz.svg" alt="">
-        <img class="txtimg audiophile"  src="images/client-audiophile.svg" alt="">
-        <img class="txtimg"  src="images/client-meet.svg" alt="">
-        <img class="txtimg"  src="images/client-maker.svg" alt="">
+      <div id="bigimg" class="bodyimg">
+        <!-- <img src="images/image-hero-desktop.png" alt="hero"> -->
       </div>
 
     </div>
 
-    <div id="bigimg" class="bodyimg">
-      <img src="images/image-hero-desktop.png" alt="hero">
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Prakriti Pokharel</a>.
     </div>
-
-  </div>
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Prakriti Pokharel</a>.
   </div>
 </body>
 
